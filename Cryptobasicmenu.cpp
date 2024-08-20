@@ -20,25 +20,49 @@ int getuseroption() {
     cout << "You chose " << userOption << endl;
     return userOption;
 }
-
-void processUserOption(int userOption) {
-    if (userOption == 0) {
-        cout << "Invalid Choice. Type 1-7" << endl;
-    } else if (userOption == 1) {
-        cout << "Our aim is to make money, analyze the market, make bids and offers" << endl;
-    } else if (userOption == 2) {
-        cout << "Market Exchange is Good. Business is being done" << endl;
-    } else if (userOption == 3) {
-        cout << "Making an offer - Type the amount" << endl;
-    } else if (userOption == 4) {
-        cout << "Making a Bid - Type the amount" << endl;
-    } else if (userOption == 5) {
-        cout << "Your wallet is empty" << endl;
-    } else if (userOption == 6) {
-        cout << "Entering in next time frame" << endl;
-    } else if (userOption == 7) {  // New condition to handle exiting
-        cout << "Exiting the program. Goodbye!" << endl;
+void errorexception(){
+    cout << "Invalid Choice. Type 1-7" << endl;
+}
+void printhelp(){
+    cout << "Our aim is to make money, analyze the market, make bids and offers" << endl;
+}
+void exchngstats(){
+    cout << "Market Exchange is Good. Business is being done" << endl;
+}
+void offer(){
+    cout << "Making an offer - Type the amount" << endl;
+}
+void Bidding(){
+    cout << "Making a Bid - Type the amount" << endl;
+}
+void Walletstatus(){
+    cout << "Your wallet is empty" << endl;
+}
+void gototimeframe(){
+    cout << "Entering in next time frame" << endl;
+}
+void exitloop(){
+ cout << "Exiting the program. Goodbye!" << endl;
         exit(0);  // Exit the program
+}
+void processUserOption(int userOption) {
+
+    if (userOption == 0) {
+        errorexception();
+    } else if (userOption == 1) {
+        printhelp();
+    } else if (userOption == 2) {
+       exchngstats();
+    } else if (userOption == 3) {
+        offer();
+    } else if (userOption == 4) {
+        Bidding();
+    } else if (userOption == 5) {
+       Walletstatus();
+    } else if (userOption == 6) {
+        gototimeframe();
+    } else if (userOption == 7) {  // New condition to handle exiting
+       exitloop();
     }
 }
 
