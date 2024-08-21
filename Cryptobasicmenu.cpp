@@ -20,31 +20,40 @@ int getuseroption() {
     cout << "You chose " << userOption << endl;
     return userOption;
 }
+
 void errorexception(){
     cout << "Invalid Choice. Type 1-7" << endl;
 }
+
 void printhelp(){
     cout << "Our aim is to make money, analyze the market, make bids and offers" << endl;
 }
+
 void exchngstats(){
     cout << "Market Exchange is Good. Business is being done" << endl;
 }
+
 void offer(){
     cout << "Making an offer - Type the amount" << endl;
 }
+
 void Bidding(){
     cout << "Making a Bid - Type the amount" << endl;
 }
+
 void Walletstatus(){
     cout << "Your wallet is empty" << endl;
 }
+
 void gototimeframe(){
     cout << "Entering in next time frame" << endl;
 }
+
 void exitloop(){
  cout << "Exiting the program. Goodbye!" << endl;
         exit(0);  // Exit the program
 }
+
 void processUserOption(int userOption) {
 
     if (userOption == 0) {
